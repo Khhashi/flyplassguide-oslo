@@ -1,32 +1,42 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router } from 'expo-router';
-import { Text, View } from 'react-native';
+import { Platform, Text, View } from 'react-native';
 
 import { Card } from '@/components/Card';
 import { Screen } from '@/components/Screen';
 import { FlightSearch } from '@/features/flight/FlightSearch';
+import { WebHero } from '@/features/home/WebHero';
+import { useIsWide } from '@/hooks/useLayout';
 import { colors } from '@/theme/tokens';
 
+function openFlight(flightNumber: string) {
+  router.push({ pathname: '/my-flight', params: { flight: flightNumber } });
+}
+
 export default function HomeScreen() {
+  const isWide = useIsWide();
+  const showWebHero = Platform.OS === 'web' && isWide;
+
   return (
-    <Screen>
+    <Screen wide={showWebHero}>
       <View className="flex-row items-center gap-2">
         <Ionicons name="airplane" size={22} color={colors.primary.DEFAULT} />
         <Text className="text-lg font-bold text-ink">Flyplassguide Oslo</Text>
       </View>
 
-      <View className="gap-2 rounded-card bg-primary-soft p-6 md:p-10">
-        <Text accessibilityRole="header" className="text-3xl font-bold text-ink md:text-4xl">
-          Velkommen til Gardermoen
-        </Text>
-        <Text className="text-lg text-ink-muted">Finn frem. Reis enklere.</Text>
-      </View>
-
-      <FlightSearch
-        onSearch={(flightNumber) =>
-          router.push({ pathname: '/my-flight', params: { flight: flightNumber } })
-        }
-      />
+      {showWebHero ? (
+        <WebHero onSearch={openFlight} />
+      ) : (
+        <>
+          <View className="gap-2 rounded-card bg-primary-soft p-6 md:p-10">
+            <Text accessibilityRole="header" className="text-3xl font-bold text-ink md:text-4xl">
+              Velkommen til Gardermoen
+            </Text>
+            <Text className="text-lg text-ink-muted">Finn frem. Reis enklere.</Text>
+          </View>
+          <FlightSearch onSearch={openFlight} />
+        </>
+      )}
 
       <View className="gap-4 md:flex-row">
         <View className="md:flex-1">
