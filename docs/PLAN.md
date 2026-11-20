@@ -2,12 +2,12 @@
 
 Navigasjonsapp for Oslo lufthavn Gardermoen. iOS og Android er hovedproduktet. Web er en lettversjon fra samme kodebase.
 
-**Plattformprioritet**
-- **Mobil (iOS/Android):** alle funksjoner – flysøk, kart, veivisning, push-varsler, posisjon, senere AR.
-- **Web (lettversjon):** flysøk, flystatus og terminalkart for planlegging hjemmefra og deling via lenke/QR. Ingen push eller veivisning.
+Plattformprioritet
+- Mobil (iOS/Android): alle funksjoner – flysøk, kart, veivisning, push-varsler, posisjon, senere AR.
+- Web (lettversjon): flysøk, flystatus og terminalkart for planlegging hjemmefra og deling via lenke/QR. Ingen push eller veivisning.
 - Web skal fungere og se bra ut, men mobil prioriteres ved konflikt om tid.
 
-> **Prinsipp:** Ingen oppdiktede fly- eller kartdata presenteres som ekte. All data merkes med kilde: `verified`, `demo` eller `illustration`.
+> Prinsipp: Ingen oppdiktede fly- eller kartdata presenteres som ekte. All data merkes med kilde: `verified`, `demo` eller `illustration`.
 
 ---
 
@@ -20,17 +20,17 @@ Navigasjonsapp for Oslo lufthavn Gardermoen. iOS og Android er hovedproduktet. W
   - `https://asrv.avinor.no/flightStatuses/v1.0` – statuskoder
   - `https://asrv.avinor.no/airportNames/v1.0` – flyplassnavn
   - `https://asrv.avinor.no/airlineNames/v1.0` – flyselskapsnavn
-- URL-er og parametere er **case-sensitive**.
+- URL-er og parametere er case-sensitive.
 - Dokumentasjon: https://partner.avinor.no/en/services/flight-data/ og xwiki.avinor.no
-- **Usikkert:** Boardingtid. Det finnes et operativt feed (`XmlFeedOperativ`) med bl.a. `gateClosedTime`, men tilgangen er ikke bekreftet. Inntil videre er boardingtid «ikke tilgjengelig» i appen.
-- **Må avklares:** Vilkår for oppdateringsfrekvens. Backend poller, klientene gjør det ikke.
+- Usikkert: Boardingtid. Det finnes et operativt feed (`XmlFeedOperativ`) med bl.a. `gateClosedTime`, men tilgangen er ikke bekreftet. Inntil videre er boardingtid «ikke tilgjengelig» i appen.
+- Må avklares: Vilkår for oppdateringsfrekvens. Backend poller, klientene gjør det ikke.
 - Kontakt: Aviation Data Office, ado@avinor.no
 
 ### Kartdata
 - Ingen åpne innendørs geodata funnet for terminalen.
 - Avinor publiserer et oversiktskart (bilde) på avinor.no – ikke grunnlag vi kan bygge på uten tillatelse.
 - Tredjepartskart har typisk kun ikke-kommersiell lisens.
-- **Tiltak:** Bygg kartmodell og komponenter med tydelig merkede demodata. Be Avinor om tilgang til kartdata/rettigheter.
+- Tiltak: Bygg kartmodell og komponenter med tydelig merkede demodata. Be Avinor om tilgang til kartdata/rettigheter.
 
 ---
 
@@ -66,7 +66,7 @@ airport-navigation-app/
 - Typer og validering deles mellom app og API via `packages/shared`.
 
 ### Kartteknologi
-- Start med eget **SVG-basert etasjekart** (`react-native-svg`): zoom, panorering, etasjevalg, markører. Likt på alle plattformer.
+- Start med eget SVG-basert etasjekart (`react-native-svg`): zoom, panorering, etasjevalg, markører. Likt på alle plattformer.
 - Gangforbindelser modelleres som graf (noder/kanter med etasje, avstand, tilgjengelighet).
 - Bytt til MapLibre bak samme grensesnitt når georefererte data finnes.
 
@@ -80,7 +80,7 @@ airport-navigation-app/
 | API | `fastify`, `fast-xml-parser`, `zod` |
 | Verktøy | TypeScript (strict), ESLint, Prettier, Vitest (api/shared), Jest + React Native Testing Library (app) |
 
-**Venter med:** PostgreSQL/PostGIS (fase 4/6), AI-SDK (fase 6), push (fase 6), MapLibre (fase 4), AR (senere).
+Venter med: PostgreSQL/PostGIS (fase 4/6), AI-SDK (fase 6), push (fase 6), MapLibre (fase 4), AR (senere).
 Flydata caches i minnet i v1. Postgres trengs først for push-abonnementer og kartdata.
 
 ---
@@ -88,7 +88,7 @@ Flydata caches i minnet i v1. Postgres trengs først for push-abonnementer og ka
 ## 4. Design
 
 - Hvit bakgrunn, mørk lettlest tekst. Primærfarge `#155EEF`.
-- Hvite inputfelt med diskrete grå kanter – **aldri svarte inputfelt**.
+- Hvite inputfelt med diskrete grå kanter – aldri svarte inputfelt.
 - Store knapper, avrundede kort, god luft. Inspirert av Apple Maps.
 - Hjem: logo, velkomst («Velkommen til Gardermoen» / «Finn frem. Reis enklere.»), flynummersøk + blå «Finn»-knapp, kort for terminalkart og AI-assistent.
 - Navigasjon: Hjem, Mitt fly, Kart, AI.
@@ -105,7 +105,7 @@ Flydata caches i minnet i v1. Postgres trengs først for push-abonnementer og ka
 - [ ] ESLint, Prettier, Vitest
 - [ ] CI: typesjekk, lint, test, web-bygg
 - [ ] README med installasjon og kjøring
-- **Ferdig når:** typesjekk/lint/test passerer, web bygger, appen starter på iOS/Android (testes lokalt).
+- Ferdig når: typesjekk/lint/test passerer, web bygger, appen starter på iOS/Android (testes lokalt).
 
 ### Fase 2 – Design og frontend
 - [ ] Hjem, Mitt fly, Terminalkart, AI-assistent
