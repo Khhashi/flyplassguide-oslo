@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Text, TextInput, View, type TextInputProps } from 'react-native';
 
-import { colors } from '@/theme/tokens';
+import { colors, touchTarget } from '@/theme/tokens';
 
 interface TextFieldProps extends Pick<
   TextInputProps,
@@ -17,7 +17,7 @@ export function TextField({ label, error, ...inputProps }: TextFieldProps) {
 
   return (
     <View className="gap-2">
-      <Text className="text-sm font-medium text-ink-muted">{label}</Text>
+      <Text className="text-base font-medium text-ink-muted">{label}</Text>
       <TextInput
         accessibilityLabel={label}
         placeholderTextColor={colors.ink.subtle}
@@ -25,14 +25,17 @@ export function TextField({ label, error, ...inputProps }: TextFieldProps) {
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
         // Blå ramme når feltet er aktivt. outline-none fjerner nettleserens svarte ramme.
-        style={focused && { borderColor: colors.primary.DEFAULT, borderWidth: 2 }}
-        className={`min-h-12 rounded-control border bg-surface px-4 text-base text-ink outline-none ${
+        style={[
+          { minHeight: touchTarget },
+          focused && { borderColor: colors.primary.DEFAULT, borderWidth: 2 },
+        ]}
+        className={`rounded-control border bg-surface px-4 text-lg text-ink outline-none ${
           error ? 'border-warning' : 'border-border'
         }`}
         {...inputProps}
       />
       {error ? (
-        <Text accessibilityRole="alert" className="text-sm text-warning">
+        <Text accessibilityRole="alert" className="text-base text-warning">
           {error}
         </Text>
       ) : null}
