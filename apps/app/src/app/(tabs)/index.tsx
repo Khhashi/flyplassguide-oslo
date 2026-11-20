@@ -4,6 +4,7 @@ import { Text, View } from 'react-native';
 
 import { Card } from '@/components/Card';
 import { Screen } from '@/components/Screen';
+import { AssistanceCard } from '@/features/assistance/AssistanceCard';
 import { FlightSearch } from '@/features/flight/FlightSearch';
 import { colors } from '@/theme/tokens';
 
@@ -52,6 +53,8 @@ export default function HomeScreen() {
           />
         </View>
       </View>
+
+      <AssistanceCard />
     </Screen>
   );
 }
