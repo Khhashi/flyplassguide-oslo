@@ -2,6 +2,8 @@
 
 Finn frem. Reis enklere.
 
+> 🚧 Status: Under utvikling, ikke klar til bruk ennå.
+
 AirportGuide Oslo er en mobilapp for iPhone og Android som hjelper deg å finne frem på Oslo lufthavn Gardermoen.
 
 ---
@@ -64,12 +66,6 @@ Appen bygges steg for steg:
 Under utviklingen bruker vi eksempeldata, og de er alltid tydelig merket som det.
 
 📄 Den tekniske planen finnes i [docs/PLAN.md](docs/PLAN.md).
-
----
-
-## Status
-
-🚧 Under utvikling, ikke klar til bruk ennå.
 
 ---
 
