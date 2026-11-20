@@ -1,3 +1,10 @@
 packages:
   - 'apps/*'
   - 'packages/*'
+
+# React Native/NativeWind fungerer mest stabilt med hoistede avhengigheter.
+# Se https://docs.expo.dev/guides/monorepos/
+nodeLinker: hoisted
+
+onlyBuiltDependencies:
+  - esbuild
