@@ -3,22 +3,25 @@ import { Pressable, Text } from 'react-native';
 interface ButtonProps {
   label: string;
   onPress: () => void;
-  disabled?: boolean;
+  variant?: 'primary' | 'secondary';
 }
 
-/** Stor, tydelig primærknapp. Minst 48 px høy for enkel berøring. */
-export function Button({ label, onPress, disabled = false }: ButtonProps) {
+/** Stor, tydelig knapp. Minst 48 px høy for enkel berøring. */
+export function Button({ label, onPress, variant = 'primary' }: ButtonProps) {
+  const isPrimary = variant === 'primary';
   return (
     <Pressable
       accessibilityRole="button"
-      accessibilityState={{ disabled }}
-      disabled={disabled}
       onPress={onPress}
       className={`min-h-12 items-center justify-center rounded-control px-6 ${
-        disabled ? 'bg-border' : 'bg-primary active:bg-primary-pressed'
+        isPrimary
+          ? 'bg-primary active:bg-primary-pressed'
+          : 'border border-border bg-surface active:bg-surface-muted'
       }`}
     >
-      <Text className="text-base font-semibold text-white">{label}</Text>
+      <Text className={`text-base font-semibold ${isPrimary ? 'text-white' : 'text-ink'}`}>
+        {label}
+      </Text>
     </Pressable>
   );
 }

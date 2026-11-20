@@ -26,6 +26,14 @@ const colors = {
     DEFAULT: '#B54708',
     soft: '#FFFAEB',
   },
+  danger: {
+    DEFAULT: '#B42318',
+    soft: '#FEF3F2',
+  },
+  success: {
+    DEFAULT: '#067647',
+    soft: '#ECFDF3',
+  },
 };
 
 const radius = {

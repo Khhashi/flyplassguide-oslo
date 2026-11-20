@@ -4,5 +4,7 @@ export declare const colors: {
   surface: { DEFAULT: string; muted: string };
   border: { DEFAULT: string; subtle: string };
   warning: { DEFAULT: string; soft: string };
+  danger: { DEFAULT: string; soft: string };
+  success: { DEFAULT: string; soft: string };
 };
 export declare const radius: { card: string; control: string };
