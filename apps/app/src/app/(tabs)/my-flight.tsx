@@ -7,6 +7,8 @@ import { Card } from '@/components/Card';
 import { Screen } from '@/components/Screen';
 import { DEMO_FLIGHT } from '@/data/demo-flight';
 import { FlightCard } from '@/features/flight/FlightCard';
+import { StepByStep } from '@/features/steps/StepByStep';
+import { buildSteps } from '@/features/steps/buildSteps';
 
 export default function MyFlightScreen() {
   const { flight } = useLocalSearchParams<{ flight?: string }>();
@@ -30,6 +32,7 @@ export default function MyFlightScreen() {
       {showExample ? (
         <View className="gap-3">
           <Text className="text-lg font-semibold text-ink">Slik vil det se ut</Text>
+          <StepByStep steps={buildSteps(DEMO_FLIGHT)} />
           <FlightCard flight={DEMO_FLIGHT} />
           <Button
             label="Skjul eksempel"
