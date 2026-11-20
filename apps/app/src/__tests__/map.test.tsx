@@ -22,3 +22,16 @@ describe('Terminalkart', () => {
     expect(screen.getByRole('tab', { name: 'Etasje 1' })).toBeSelected();
   });
 });
+
+describe('Terminalkart – søk og filter', () => {
+  it('filtrerer på kategori og viser melding når ingenting passer', async () => {
+    await renderRouter(appDir, { initialUrl: '/map' });
+
+    await fireEvent.press(screen.getByRole('button', { name: 'Toaletter' }));
+    expect(screen.getByText('Toalett ved gate 1')).toBeOnTheScreen();
+    expect(screen.queryByText('Kafé')).not.toBeOnTheScreen();
+
+    await fireEvent.changeText(screen.getByLabelText('Søk etter sted'), 'finnes ikke');
+    expect(screen.getByText('Fant ingen steder som passer søket.')).toBeOnTheScreen();
+  });
+});
