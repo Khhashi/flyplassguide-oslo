@@ -1,0 +1,36 @@
+/**
+ * Designtokens for AirportGuide Oslo.
+ * Brukes både av Tailwind (klassenavn) og direkte i kode der klasser ikke passer.
+ * Hold dette som ren JavaScript slik at tailwind.config.js kan lese filen.
+ */
+const colors = {
+  primary: {
+    DEFAULT: '#155EEF',
+    pressed: '#0E4AC4',
+    soft: '#EAF1FF',
+  },
+  ink: {
+    DEFAULT: '#101828',
+    muted: '#475467',
+    subtle: '#667085',
+  },
+  surface: {
+    DEFAULT: '#FFFFFF',
+    muted: '#F7F8FA',
+  },
+  border: {
+    DEFAULT: '#D0D5DD',
+    subtle: '#EAECF0',
+  },
+  warning: {
+    DEFAULT: '#B54708',
+    soft: '#FFFAEB',
+  },
+};
+
+const radius = {
+  card: '20px',
+  control: '14px',
+};
+
+module.exports = { colors, radius };

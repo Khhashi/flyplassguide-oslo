@@ -5,3 +5,5 @@ coverage
 pnpm-lock.yaml
 apps/app/expo-env.d.ts
 apps/app/assets
+docs
+README.md
