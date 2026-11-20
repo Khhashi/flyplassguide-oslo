@@ -18,3 +18,10 @@ describe('Button', () => {
     expect(screen.getByRole('button', { name: 'Se et eksempel' })).toBeOnTheScreen();
   });
 });
+
+describe('Button – størrelse', () => {
+  it('er minst 56 px høy, så den er lett å treffe', async () => {
+    await render(<Button label="Finn" onPress={jest.fn()} />);
+    expect(screen.getByRole('button', { name: 'Finn' })).toHaveStyle({ minHeight: 56 });
+  });
+});
