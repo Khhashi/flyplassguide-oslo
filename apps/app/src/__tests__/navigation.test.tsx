@@ -20,7 +20,7 @@ describe('Navigasjon', () => {
     expect(screen).toHavePathname('/my-flight');
     expect(screen).toHaveSearchParams({ flight: 'DY123' });
     expect(screen.getByText('DY123')).toBeOnTheScreen();
-    expect(screen.getByText(/ikke koblet til ennå/)).toBeOnTheScreen();
+    expect(screen.getByText(/ikke ekte flyinformasjon/)).toBeOnTheScreen();
   });
 
   it('har fire faner: Hjem, Mitt fly, Kart og AI', async () => {
