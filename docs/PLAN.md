@@ -97,15 +97,16 @@ Flydata caches i minnet i v1. Postgres trengs først for push-abonnementer og ka
 
 ## 5. Faser
 
-### Fase 1 – Prosjektoppsett
-- [ ] pnpm-monorepo (`apps/app`, `apps/api`, `packages/shared`)
-- [ ] Expo + TypeScript (strict) + Expo Router med fire faner
-- [ ] NativeWind + designtokens
-- [ ] API-skjelett med `/health`
-- [ ] ESLint, Prettier, Vitest
-- [ ] CI: typesjekk, lint, test, web-bygg
-- [ ] README med installasjon og kjøring
-- Ferdig når: typesjekk/lint/test passerer, web bygger, appen starter på iOS/Android (testes lokalt).
+### Fase 1 – Prosjektoppsett ✅
+- [x] pnpm-monorepo (`apps/app`, `apps/api`, `packages/shared`), hoisted node-linker
+- [x] Expo SDK 58 + TypeScript (strict) + Expo Router med fire faner
+- [x] NativeWind 4 + designtokens
+- [x] API-skjelett (Fastify) med `/health`, konfig via miljøvariabler
+- [x] ESLint 9, Prettier, Vitest (api/shared), Jest + RNTL + expo-router/testing-library (app)
+- [x] CI: typesjekk, lint, formattering, test, web-bygg
+- [x] README med installasjon og kjøring
+- Verifisert: typesjekk/lint/test passerer, web bygger og er testet i nettleser (mobil- og desktopbredde).
+- Ikke verifisert ennå: kjøring på ekte iPhone/Android.
 
 ### Fase 2 – Design og frontend
 - [ ] Hjem, Mitt fly, Terminalkart, AI-assistent
