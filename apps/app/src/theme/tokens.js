@@ -41,4 +41,7 @@ const radius = {
   control: '14px',
 };
 
-module.exports = { colors, radius };
+/** Minste høyde på knapper og felt, så de er lette å treffe for alle. */
+const touchTarget = 56;
+
+module.exports = { colors, radius, touchTarget };
