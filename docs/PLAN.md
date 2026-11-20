@@ -1,4 +1,4 @@
-# AirportGuide Oslo – Prosjektplan
+# Flyplassguide Oslo – Prosjektplan
 
 Navigasjonsapp for Oslo lufthavn Gardermoen. iOS og Android er hovedproduktet. Web er en lettversjon fra samme kodebase.
 

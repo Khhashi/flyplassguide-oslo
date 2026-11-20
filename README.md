@@ -1,10 +1,10 @@
-# AirportGuide Oslo ✈️
+# Flyplassguide Oslo ✈️
 
 Finn frem. Reis enklere.
 
 > 🚧 Status: Under utvikling, ikke klar til bruk ennå. Fase 1 (grunnmuren) er ferdig.
 
-AirportGuide Oslo er en mobilapp for iPhone og Android som hjelper deg å finne frem på Oslo lufthavn Gardermoen.
+Flyplassguide Oslo er en mobilapp for iPhone og Android som hjelper deg å finne frem på Oslo lufthavn Gardermoen.
 
 ---
 
@@ -89,7 +89,7 @@ pnpm api               # start serveren på http://localhost:3000
 Sjekke at alt fungerer:
 
 ```bash
-pnpm check             # typesjekk, lint, formattering og alle tester
+pnpm check             # typesjekk, kodesjekk, formatering og alle tester
 pnpm test              # bare testene
 pnpm build:web         # bygg nettversjonen
 ```
@@ -104,7 +104,9 @@ apps/api         Serveren som skal hente flydata fra Avinor
 packages/shared  Kode som deles mellom appen og serveren
 ```
 
-GitHub kjører alle sjekkene automatisk for hver endring.
+GitHub kjører alle sjekkene automatisk ved hver endring.
+
+Slik jobber vi: hver oppgave får en egen sak (issue) og en egen gren (branch). Endringene sendes inn som små endringsforslag (pull request) på rundt 50–70 linjer kode, med tester. Beskrivelsen av hver endring (commit-melding) skrives på norsk og starter med `ny:`, `fiks:`, `test:`, `dok:` eller `oppsett:`.
 
 ---
 
