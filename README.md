@@ -89,7 +89,7 @@ pnpm api               # start serveren på http://localhost:3000
 Sjekke at alt fungerer:
 
 ```bash
-pnpm check             # typesjekk, lint, formattering og alle tester
+pnpm check             # typesjekk, kodesjekk, formatering og alle tester
 pnpm test              # bare testene
 pnpm build:web         # bygg nettversjonen
 ```
@@ -104,9 +104,9 @@ apps/api         Serveren som skal hente flydata fra Avinor
 packages/shared  Kode som deles mellom appen og serveren
 ```
 
-GitHub kjører alle sjekkene automatisk for hver endring.
+GitHub kjører alle sjekkene automatisk ved hver endring.
 
-Arbeidsflyt: ett issue og én egen branch per oppgave, og små PR-er på rundt 50–70 linjer kode med tester. Commit-meldinger skrives på norsk og starter med `ny:`, `fiks:`, `test:`, `dok:` eller `oppsett:`.
+Slik jobber vi: hver oppgave får en egen sak (issue) og en egen gren (branch). Endringene sendes inn som små endringsforslag (pull request) på rundt 50–70 linjer kode, med tester. Beskrivelsen av hver endring (commit-melding) skrives på norsk og starter med `ny:`, `fiks:`, `test:`, `dok:` eller `oppsett:`.
 
 ---
 
