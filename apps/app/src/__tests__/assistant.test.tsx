@@ -23,3 +23,15 @@ describe('AI-assistent', () => {
     expect(screen.queryByText(/ikke koblet til/)).not.toBeOnTheScreen();
   });
 });
+
+describe('AI-assistent – forslag', () => {
+  it('sender forslaget som spørsmål og skjuler forslagene etterpå', async () => {
+    await renderRouter(appDir, { initialUrl: '/assistant' });
+
+    await fireEvent.press(screen.getByRole('button', { name: 'Hvor er nærmeste toalett?' }));
+
+    expect(screen.getByText('Hvor er nærmeste toalett?')).toBeOnTheScreen();
+    expect(screen.getByText(/ikke koblet til/)).toBeOnTheScreen();
+    expect(screen.queryByText('Prøv et av disse spørsmålene:')).not.toBeOnTheScreen();
+  });
+});
