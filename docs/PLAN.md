@@ -1,6 +1,11 @@
 # AirportGuide Oslo – Prosjektplan
 
-Navigasjonsapp for Oslo lufthavn Gardermoen. Web, iOS og Android fra én kodebase.
+Navigasjonsapp for Oslo lufthavn Gardermoen. iOS og Android er hovedproduktet. Web er en lettversjon fra samme kodebase.
+
+**Plattformprioritet**
+- **Mobil (iOS/Android):** alle funksjoner – flysøk, kart, veivisning, push-varsler, posisjon, senere AR.
+- **Web (lettversjon):** flysøk, flystatus og terminalkart for planlegging hjemmefra og deling via lenke/QR. Ingen push eller veivisning.
+- Web skal fungere og se bra ut, men mobil prioriteres ved konflikt om tid.
 
 > **Prinsipp:** Ingen oppdiktede fly- eller kartdata presenteres som ekte. All data merkes med kilde: `verified`, `demo` eller `illustration`.
 

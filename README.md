@@ -2,7 +2,7 @@
 
 **Finn frem. Reis enklere.**
 
-AirportGuide Oslo er en app som hjelper deg å finne frem på Oslo lufthavn Gardermoen. Den skal fungere på mobil (iPhone og Android) og på nett.
+AirportGuide Oslo er en mobilapp for iPhone og Android som hjelper deg å finne frem på Oslo lufthavn Gardermoen.
 
 ---
 
@@ -24,6 +24,20 @@ Målet er at du skal bruke mindre tid på å lete og mer tid på å slappe av f�
 - **Vise vei:** Få veibeskrivelse til gaten din, også ruter uten trapper.
 - **Svare på spørsmål:** Spør en assistent, for eksempel «Hvor er nærmeste toalett?» eller «Er flyet mitt forsinket?»
 - **Senere:** Vise piler gjennom mobilkameraet som viser veien.
+
+---
+
+## Mobil først, nett som lettversjon
+
+Inne i terminalen går du med telefonen i hånda, så **mobilappen er hovedproduktet**. Det er bare der du får varsler i lomma, veivisning mens du går og etter hvert kamera-piler.
+
+I tillegg kommer en **enkel nettversjon** for det du gjør *før* du er på flyplassen:
+
+- Sjekke flyet og gaten fra PC-en hjemme.
+- Se terminalkartet uten å laste ned noe, for eksempel via en lenke eller QR-kode.
+- La familie eller venner følge flyet ditt.
+
+Nettversjonen bruker samme kode som appen, så den koster lite ekstra å lage. Varsler og veivisning finnes bare i mobilappen.
 
 ---
 
