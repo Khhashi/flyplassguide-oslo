@@ -10,6 +10,7 @@ const flight: Flight = {
   scheduledDeparture: '2026-11-20T15:30:00Z',
   updatedDeparture: '2026-11-20T15:50:00Z',
   gate: 'A12',
+  checkIn: '1-3',
   boardingTime: null,
   status: 'new_time',
   lastUpdated: '2026-11-20T14:02:00Z',
