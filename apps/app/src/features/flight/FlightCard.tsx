@@ -1,4 +1,4 @@
-import type { Flight } from '@airportguide/shared';
+import type { Flight } from '@flyplassguide/shared';
 import { Text, View } from 'react-native';
 
 import { DemoBadge } from '@/components/DemoBadge';

@@ -1,10 +1,10 @@
-# AirportGuide Oslo ✈️
+# Flyplassguide Oslo ✈️
 
 Finn frem. Reis enklere.
 
 > 🚧 Status: Under utvikling, ikke klar til bruk ennå. Fase 1 (grunnmuren) er ferdig.
 
-AirportGuide Oslo er en mobilapp for iPhone og Android som hjelper deg å finne frem på Oslo lufthavn Gardermoen.
+Flyplassguide Oslo er en mobilapp for iPhone og Android som hjelper deg å finne frem på Oslo lufthavn Gardermoen.
 
 ---
 
@@ -105,6 +105,8 @@ packages/shared  Kode som deles mellom appen og serveren
 ```
 
 GitHub kjører alle sjekkene automatisk for hver endring.
+
+Arbeidsflyt: ett issue og én egen branch per oppgave, og små PR-er på rundt 50–70 linjer kode med tester. Commit-meldinger skrives på norsk og starter med `ny:`, `fiks:`, `test:`, `dok:` eller `oppsett:`.
 
 ---
 

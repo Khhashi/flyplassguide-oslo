@@ -1,4 +1,4 @@
-import { requiresDemoLabel, type DataSource } from '@airportguide/shared';
+import { requiresDemoLabel, type DataSource } from '@flyplassguide/shared';
 import { Text, View } from 'react-native';
 
 interface DemoBadgeProps {

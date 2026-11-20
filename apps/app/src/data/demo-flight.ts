@@ -1,4 +1,4 @@
-import type { Flight } from '@airportguide/shared';
+import type { Flight } from '@flyplassguide/shared';
 
 /**
  * Eksempelfly for å vise hvordan Mitt fly ser ut før Avinor-data er koblet til.

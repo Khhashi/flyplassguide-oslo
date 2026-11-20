@@ -1,5 +1,5 @@
 /**
- * Designtokens for AirportGuide Oslo.
+ * Designtokens for Flyplassguide Oslo.
  * Brukes både av Tailwind (klassenavn) og direkte i kode der klasser ikke passer.
  * Hold dette som ren JavaScript slik at tailwind.config.js kan lese filen.
  */

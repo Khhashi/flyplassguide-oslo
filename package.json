@@ -1,20 +1,20 @@
 {
-  "name": "airportguide-oslo",
+  "name": "flyplassguide-oslo",
   "private": true,
   "packageManager": "pnpm@10.28.0",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "app": "pnpm --filter @airportguide/app start",
-    "web": "pnpm --filter @airportguide/app web",
-    "api": "pnpm --filter @airportguide/api dev",
+    "app": "pnpm --filter @flyplassguide/app start",
+    "web": "pnpm --filter @flyplassguide/app web",
+    "api": "pnpm --filter @flyplassguide/api dev",
     "typecheck": "pnpm -r typecheck",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "pnpm -r test",
-    "build:web": "pnpm --filter @airportguide/app build:web",
+    "build:web": "pnpm --filter @flyplassguide/app build:web",
     "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test"
   },
   "devDependencies": {

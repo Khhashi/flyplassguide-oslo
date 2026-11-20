@@ -1,4 +1,4 @@
-import type { Flight, FlightStatus } from '@airportguide/shared';
+import type { Flight, FlightStatus } from '@flyplassguide/shared';
 
 const timeFormatter = new Intl.DateTimeFormat('nb-NO', {
   hour: '2-digit',

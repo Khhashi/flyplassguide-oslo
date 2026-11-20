@@ -156,7 +156,7 @@ vite.config.ts.timestamp-*
 .nx/workspace-data
 .nx/migrate-runs
 
-# AirportGuide
+# Flyplassguide
 .env
 .expo/
 dist/

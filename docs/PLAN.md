@@ -1,4 +1,4 @@
-# AirportGuide Oslo – Prosjektplan
+# Flyplassguide Oslo – Prosjektplan
 
 Navigasjonsapp for Oslo lufthavn Gardermoen. iOS og Android er hovedproduktet. Web er en lettversjon fra samme kodebase.
 
@@ -39,7 +39,7 @@ Plattformprioritet
 ### Prosjektstruktur (pnpm workspaces)
 
 ```
-airport-navigation-app/
+flyplassguide-oslo/
 ├─ apps/
 │  ├─ app/            # Expo + Expo Router → iOS, Android og web
 │  │  ├─ app/         # ruter: (tabs)/index, my-flight, map, assistant
@@ -155,4 +155,4 @@ Krever verifisert innendørsposisjonering og kartdata. Startes ikke før 2D-navi
 1. pnpm + Fastify, eller npm + Express?
 2. Hvor skal API og web hostes?
 3. Hvem kontakter Avinor om kartdata og boardinginformasjon?
-4. Skal repoet få nytt navn til `airportguide-oslo`?
+4. ~~Nytt navn på repoet~~ Gjort: `flyplassguide-oslo`

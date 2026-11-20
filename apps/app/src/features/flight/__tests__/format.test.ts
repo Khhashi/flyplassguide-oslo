@@ -1,4 +1,4 @@
-import type { Flight, FlightStatus } from '@airportguide/shared';
+import type { Flight, FlightStatus } from '@flyplassguide/shared';
 
 import { describeStatus, formatTime, hasNewDepartureTime } from '../format';
 

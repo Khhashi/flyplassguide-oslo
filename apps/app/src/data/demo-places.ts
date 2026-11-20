@@ -1,4 +1,4 @@
-import type { DataSource } from '@airportguide/shared';
+import type { DataSource } from '@flyplassguide/shared';
 
 export type PlaceCategory = 'gate' | 'toilet' | 'food' | 'shop';
 

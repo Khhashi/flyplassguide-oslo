@@ -1,4 +1,4 @@
-import { normalizeFlightNumber } from '@airportguide/shared';
+import { normalizeFlightNumber } from '@flyplassguide/shared';
 import { useState } from 'react';
 import { View } from 'react-native';
 
