@@ -6,6 +6,12 @@ Finn frem. Reis enklere.
 
 Flyplassguide Oslo er en mobilapp for iPhone og Android som hjelper deg å finne frem på Oslo lufthavn Gardermoen.
 
+<p align="center">
+  <img src="docs/media/demo.gif" alt="Demo av appen: søk på flynummer, eksempel på flykort, kart med filter og AI-assistent" width="320">
+</p>
+
+<p align="center"><em>Slik ser appen ut nå. Flydata og steder i videoen er eksempeldata.</em></p>
+
 ---
 
 ## Hvorfor lager jeg dette?
