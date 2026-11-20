@@ -1,6 +1,7 @@
 import Fastify, { type FastifyInstance } from 'fastify';
 
 import type { Config } from './config';
+import { registerFlightRoutes, type FindFlight } from './routes/flights';
 
 export interface HealthResponse {
   status: 'ok';
@@ -8,7 +9,10 @@ export interface HealthResponse {
 }
 
 /** Bygger API-et uten å starte det, slik at testene kan bruke det direkte. */
-export function buildApp(config: Pick<Config, 'NODE_ENV' | 'CORS_ORIGINS'>): FastifyInstance {
+export function buildApp(
+  config: Pick<Config, 'NODE_ENV' | 'CORS_ORIGINS'>,
+  deps: { findFlight?: FindFlight } = {},
+): FastifyInstance {
   const app = Fastify({
     logger: config.NODE_ENV === 'test' ? false : { level: 'info' },
   });
@@ -30,6 +34,8 @@ export function buildApp(config: Pick<Config, 'NODE_ENV' | 'CORS_ORIGINS'>): Fas
   app.get('/health', async (): Promise<HealthResponse> => {
     return { status: 'ok', uptimeSeconds: Math.round(process.uptime()) };
   });
+
+  if (deps.findFlight) registerFlightRoutes(app, deps.findFlight);
 
   app.setNotFoundHandler(async (request, reply) => {
     return reply.code(404).send({ error: 'not_found', message: `Fant ikke ${request.url}` });
