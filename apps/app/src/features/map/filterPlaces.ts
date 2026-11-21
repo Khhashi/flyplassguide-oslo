@@ -1,10 +1,10 @@
 import type { Place, PlaceCategory } from '@/data/demo-places';
 
 export const CATEGORY_LABELS: Record<PlaceCategory, string> = {
-  gate: 'Gater',
-  toilet: 'Toaletter',
-  food: 'Mat',
+  gate: 'Gate',
+  food: 'Mat og drikke',
   shop: 'Butikker',
+  toilet: 'Toaletter',
 };
 
 interface PlaceFilter {

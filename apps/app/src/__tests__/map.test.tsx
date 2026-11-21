@@ -35,3 +35,12 @@ describe('Terminalkart – søk og filter', () => {
     expect(screen.getByText('Fant ingen steder som passer søket.')).toBeOnTheScreen();
   });
 });
+
+describe('Terminalkart – fra snarvei', () => {
+  it('åpner med toaletter valgt', async () => {
+    await renderRouter(appDir, { initialUrl: '/map?kategori=toilet' });
+
+    expect(screen.getByRole('button', { name: 'Toaletter' })).toBeSelected();
+    expect(screen.queryByText('Kafé')).not.toBeOnTheScreen();
+  });
+});
