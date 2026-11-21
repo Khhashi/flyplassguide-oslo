@@ -21,6 +21,12 @@ export default function MapScreen() {
   const [category, setCategory] = useState<PlaceCategory | null>(
     kategori && kategori in CATEGORY_LABELS ? (kategori as PlaceCategory) : null,
   );
+  // Kartet blir liggende i minnet mellom fanene, så en ny snarvei må også velge kategori.
+  const [lastKategori, setLastKategori] = useState(kategori);
+  if (kategori !== lastKategori) {
+    setLastKategori(kategori);
+    if (kategori && kategori in CATEGORY_LABELS) setCategory(kategori as PlaceCategory);
+  }
   const places = filterPlaces(DEMO_PLACES, { floor, query, category });
 
   return (

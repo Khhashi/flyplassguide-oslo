@@ -1,4 +1,5 @@
-import { fireEvent, renderRouter, screen } from 'expo-router/testing-library';
+import { router } from 'expo-router';
+import { act, fireEvent, renderRouter, screen } from 'expo-router/testing-library';
 import path from 'node:path';
 
 const appDir = path.resolve(__dirname, '../app');
@@ -51,5 +52,16 @@ describe('Terminalkart – rute', () => {
 
     expect(screen.getByRole('header', { name: 'Til gate A12' })).toBeOnTheScreen();
     expect(screen.getByText(/kommer når vi har et verifisert kart/)).toBeOnTheScreen();
+  });
+});
+
+describe('Terminalkart – snarvei etter besøk', () => {
+  it('velger kategorien selv om kartet er åpnet før', async () => {
+    await renderRouter(appDir, { initialUrl: '/map' });
+    expect(screen.getByRole('button', { name: 'Toaletter' })).not.toBeSelected();
+
+    await act(() => router.push('/map?kategori=toilet'));
+
+    expect(screen.getByRole('button', { name: 'Toaletter' })).toBeSelected();
   });
 });
