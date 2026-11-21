@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
 
-import { colors } from '@/theme/tokens';
+import { colors, touchTarget } from '@/theme/tokens';
 
 import { TextField } from '../TextField';
 
@@ -14,5 +14,10 @@ describe('TextField', () => {
 
     await fireEvent(input, 'blur');
     expect(input).not.toHaveStyle({ borderColor: colors.primary.DEFAULT });
+  });
+
+  it('er minst like høyt som knappene', async () => {
+    await render(<TextField label="Flynummer" />);
+    expect(screen.getByLabelText('Flynummer')).toHaveStyle({ minHeight: touchTarget });
   });
 });
