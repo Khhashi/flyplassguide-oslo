@@ -13,7 +13,7 @@ export default function HomeScreen() {
     <Screen>
       <View className="flex-row items-center gap-2">
         <Ionicons name="airplane" size={22} color={colors.primary.DEFAULT} />
-        <Text className="text-lg font-bold text-ink">Flyplassguide Oslo</Text>
+        <Text className="text-lg font-bold text-ink">FlyGuide</Text>
       </View>
 
       <View className="gap-2 rounded-card bg-primary-soft p-6 md:p-10">

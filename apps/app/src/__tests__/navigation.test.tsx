@@ -7,6 +7,7 @@ describe('Navigasjon', () => {
   it('viser hjemskjermen med velkomst og flysøk', async () => {
     await renderRouter(appDir, { initialUrl: '/' });
 
+    expect(screen.getByText('FlyGuide')).toBeOnTheScreen();
     expect(screen.getByText('Velkommen til Gardermoen')).toBeOnTheScreen();
     expect(screen.getByLabelText('Flynummer')).toBeOnTheScreen();
     expect(screen.getByRole('button', { name: 'Trenger du hjelp?' })).toBeOnTheScreen();

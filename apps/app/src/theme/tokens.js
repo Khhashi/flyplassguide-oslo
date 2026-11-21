@@ -1,13 +1,13 @@
 /**
- * Designtokens for Flyplassguide Oslo.
+ * Designtokens for FlyGuide.
  * Brukes både av Tailwind (klassenavn) og direkte i kode der klasser ikke passer.
  * Hold dette som ren JavaScript slik at tailwind.config.js kan lese filen.
  */
 const colors = {
   primary: {
-    DEFAULT: '#155EEF',
-    pressed: '#0E4AC4',
-    soft: '#EAF1FF',
+    DEFAULT: '#4F46E5',
+    pressed: '#4338CA',
+    soft: '#EEF2FF',
   },
   ink: {
     DEFAULT: '#101828',
