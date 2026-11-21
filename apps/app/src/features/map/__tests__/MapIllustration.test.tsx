@@ -10,3 +10,12 @@ describe('MapIllustration', () => {
     expect(screen.getByLabelText('Illustrasjon av kart med rute til gate A12')).toBeOnTheScreen();
   });
 });
+
+describe('MapIllustration – ikoner', () => {
+  it('gjør andre kategorier svakere når én er valgt', async () => {
+    await render(<MapIllustration gate="A12" highlight="toilet" />);
+
+    expect(screen.getAllByTestId('poi-toilet')[0]).toHaveStyle({ opacity: 1 });
+    expect(screen.getAllByTestId('poi-food')[0]).toHaveStyle({ opacity: 0.3 });
+  });
+});

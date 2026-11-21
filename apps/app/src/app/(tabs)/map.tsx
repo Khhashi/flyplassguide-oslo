@@ -29,7 +29,7 @@ export default function MapScreen() {
         Kart – OSL
       </Text>
       <CategoryPicker selected={category} onSelect={setCategory} />
-      <MapIllustration gate={DEMO_FLIGHT.gate ?? 'A12'} />
+      <MapIllustration gate={DEMO_FLIGHT.gate ?? 'A12'} highlight={category} />
       <RouteCard gate={DEMO_FLIGHT.gate ?? 'A12'} />
       <DemoBadge source="demo" />
       <TextField
