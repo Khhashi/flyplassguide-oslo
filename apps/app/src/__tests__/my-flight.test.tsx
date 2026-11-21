@@ -18,7 +18,8 @@ describe('Mitt fly', () => {
     await fireEvent.press(screen.getByRole('button', { name: 'Se et eksempel' }));
 
     expect(screen.getByText('XX123')).toBeOnTheScreen();
-    expect(screen.getByText(/Demodata/)).toBeOnTheScreen();
+    expect(screen.getAllByText(/Demodata/)).toHaveLength(2);
+    expect(screen.getByText('Lever bagasjen ved skranke 1–3.')).toBeOnTheScreen();
 
     await fireEvent.press(screen.getByRole('button', { name: 'Skjul eksempel' }));
     expect(screen.queryByText('XX123')).not.toBeOnTheScreen();
