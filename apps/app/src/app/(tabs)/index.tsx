@@ -4,11 +4,16 @@ import { View } from 'react-native';
 
 import { Card } from '@/components/Card';
 import { Screen } from '@/components/Screen';
+import { demoNextFlight } from '@/data/demo-flight';
 import { AssistanceCard } from '@/features/assistance/AssistanceCard';
+import { NextFlightCard } from '@/features/flight/NextFlightCard';
 import { HomeHero } from '@/features/home/HomeHero';
+import { useNow } from '@/hooks/useNow';
 import { colors } from '@/theme/tokens';
 
 export default function HomeScreen() {
+  const now = useNow();
+
   return (
     <Screen>
       <HomeHero
@@ -16,6 +21,8 @@ export default function HomeScreen() {
           router.push({ pathname: '/my-flight', params: { flight: flightNumber } })
         }
       />
+
+      <NextFlightCard flight={demoNextFlight(now)} now={now} />
 
       <View className="gap-4 md:flex-row">
         <View className="md:flex-1">

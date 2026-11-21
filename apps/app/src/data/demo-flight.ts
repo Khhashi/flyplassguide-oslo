@@ -17,3 +17,14 @@ export const DEMO_FLIGHT: Flight = {
   lastUpdated: '2026-11-20T14:02:00Z',
   source: 'demo',
 };
+
+/** Eksempelflyet med avgang litt frem i tid, så nedtellingen på Hjem gir mening. */
+export function demoNextFlight(now: Date): Flight {
+  const departure = new Date(now.getTime() + 45 * 60_000).toISOString();
+  return {
+    ...DEMO_FLIGHT,
+    scheduledDeparture: departure,
+    updatedDeparture: null,
+    status: 'scheduled',
+  };
+}

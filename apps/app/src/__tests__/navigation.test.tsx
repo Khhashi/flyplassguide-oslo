@@ -9,6 +9,8 @@ describe('Navigasjon', () => {
 
     expect(screen.getByText('FlyGuide')).toBeOnTheScreen();
     expect(screen.getByText('God tur!')).toBeOnTheScreen();
+    expect(screen.getByText('Ditt neste fly')).toBeOnTheScreen();
+    expect(screen.getByText('45 min')).toBeOnTheScreen();
     expect(screen.getByLabelText('Flynummer')).toBeOnTheScreen();
     expect(screen.getByRole('button', { name: 'Trenger du hjelp?' })).toBeOnTheScreen();
   });
