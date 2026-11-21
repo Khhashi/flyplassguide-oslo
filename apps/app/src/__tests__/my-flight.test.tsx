@@ -20,7 +20,9 @@ describe('Mitt fly', () => {
     expect(screen.getByText('XX123')).toBeOnTheScreen();
     expect(screen.getAllByText(/Demodata/)).toHaveLength(2);
     expect(
-      screen.getByText('Har du koffert? Lever den ved skranke 1–3. Bare håndbagasje? Gå videre.'),
+      screen.getByText(
+        'Har du koffert? Følg skiltene mot innsjekking og lever den hos Eksempel Air, skranke 1–3. Bare håndbagasje? Gå videre.',
+      ),
     ).toBeOnTheScreen();
 
     await fireEvent.press(screen.getByRole('button', { name: 'Skjul eksempel' }));
