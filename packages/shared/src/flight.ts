@@ -28,6 +28,8 @@ export const FlightSchema = z.object({
   scheduledDeparture: z.iso.datetime(),
   updatedDeparture: z.iso.datetime().nullable(),
   gate: z.string().nullable(),
+  /** Innsjekkingsskranker, f.eks. «1-3». Brukes i steg-for-steg. */
+  checkIn: z.string().nullable().default(null),
   boardingTime: z.iso.datetime().nullable(),
   status: FlightStatusSchema,
   lastUpdated: z.iso.datetime(),

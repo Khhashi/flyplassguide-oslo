@@ -43,7 +43,11 @@ describe('FlightSchema', () => {
   };
 
   it('godtar manglende gate og boardingtid som null', () => {
-    expect(FlightSchema.parse(base)).toEqual(base);
+    expect(FlightSchema.parse(base)).toEqual({ ...base, checkIn: null });
+  });
+
+  it('tar med innsjekkingsskranke når den finnes', () => {
+    expect(FlightSchema.parse({ ...base, checkIn: '1-3' }).checkIn).toBe('1-3');
   });
 
   it('avviser data uten kilde', () => {
