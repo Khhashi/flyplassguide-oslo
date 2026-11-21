@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<airportNames>
+    <airportName code="BGO" name="Bergen"/>
+    <airportName code="CDG" name="Paris Charles de Gaulle"/>
+    <airportName code="TOS" name="Tromsø"/>
+    <airportName code="TRD" name="Trondheim"/>
+</airportNames>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<airlineNames>
+    <airlineName code="0A" name="Amber Air"/>
+    <airlineName code="DY" name="Norwegian"/>
+    <airlineName code="SK" name="SAS"/>
+    <airlineName code="WF" name="Widerøe"/>
+    <airlineName code="D8" name="Norwegian"/>
+</airlineNames>
