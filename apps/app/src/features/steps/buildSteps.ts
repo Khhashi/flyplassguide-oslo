@@ -6,9 +6,10 @@ export function buildSteps(flight: Flight): string[] {
     return ['Flyet ditt er innstilt. Kontakt flyselskapet.'];
   }
   return [
+    // Mange har bare håndbagasje, så steget sier hva begge skal gjøre.
     flight.checkIn
-      ? `Lever bagasjen ved skranke ${flight.checkIn.replace('-', '–')}.`
-      : 'Se på skjermene hvor du leverer bagasjen.',
+      ? `Har du koffert? Lever den ved skranke ${flight.checkIn.replace('-', '–')}. Bare håndbagasje? Gå videre.`
+      : 'Har du koffert? Se på skjermene hvor du leverer den. Bare håndbagasje? Gå videre.',
     'Gå gjennom sikkerhetskontrollen.',
     flight.gate ? `Gå til gate ${flight.gate}.` : 'Gaten er ikke klar ennå. Vent ved skjermene.',
   ];

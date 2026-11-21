@@ -32,7 +32,7 @@ Derfor lager jeg en app som gjør én ting: viser deg steg for steg hva du skal 
 
 ## Hva skal appen kunne gjøre?
 
-- Steg for steg: Skriv inn flynummeret, så får du en enkel liste. For eksempel: «1. Lever bagasjen ved skranke 1–3. 2. Gå gjennom sikkerhetskontrollen. 3. Gå til gate A15.»
+- Steg for steg: Skriv inn flynummeret, så får du en enkel liste. For eksempel: «1. Har du koffert? Lever den ved skranke 1–3. Bare håndbagasje? Gå videre. 2. Gå gjennom sikkerhetskontrollen. 3. Gå til gate A15.»
 - Stor tekst og få knapper: Én ting på skjermen om gangen.
 - Lese opp: Appen kan lese stegene høyt.
 - Gi beskjed om endringer: Du får et tydelig varsel hvis gaten eller tiden endres.

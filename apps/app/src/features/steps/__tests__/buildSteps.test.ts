@@ -5,7 +5,7 @@ import { buildSteps } from '../buildSteps';
 describe('buildSteps', () => {
   it('viser skranke, sikkerhetskontroll og gate', () => {
     expect(buildSteps(DEMO_FLIGHT)).toEqual([
-      'Lever bagasjen ved skranke 1–3.',
+      'Har du koffert? Lever den ved skranke 1–3. Bare håndbagasje? Gå videre.',
       'Gå gjennom sikkerhetskontrollen.',
       'Gå til gate A12.',
     ]);
