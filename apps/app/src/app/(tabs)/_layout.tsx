@@ -49,14 +49,14 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen name="index" options={{ title: 'Hjem', tabBarIcon: tabIcon('home-outline') }} />
-      <Tabs.Screen
-        name="my-flight"
-        options={{ title: 'Mitt fly', tabBarIcon: tabIcon('airplane-outline') }}
-      />
       <Tabs.Screen name="map" options={{ title: 'Kart', tabBarIcon: tabIcon('map-outline') }} />
       <Tabs.Screen
+        name="my-flight"
+        options={{ title: 'Fly', tabBarIcon: tabIcon('airplane-outline') }}
+      />
+      <Tabs.Screen
         name="assistant"
-        options={{ title: 'AI', tabBarIcon: tabIcon('chatbubble-ellipses-outline') }}
+        options={{ title: 'AI-guide', tabBarIcon: tabIcon('sparkles-outline') }}
       />
     </Tabs>
   );

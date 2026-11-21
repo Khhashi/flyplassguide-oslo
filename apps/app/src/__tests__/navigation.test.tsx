@@ -25,7 +25,7 @@ describe('Navigasjon', () => {
     expect(screen.getByText(/ikke ekte flyinformasjon/)).toBeOnTheScreen();
   });
 
-  it('har fire faner: Hjem, Mitt fly, Kart og AI', async () => {
+  it('har fire faner: Hjem, Kart, Fly og AI-guide', async () => {
     await renderRouter(appDir, { initialUrl: '/' });
 
     const tabNames = screen
@@ -34,7 +34,7 @@ describe('Navigasjon', () => {
       .filter((label) => label.includes('tab'));
 
     expect(tabNames).toHaveLength(4);
-    ['Hjem', 'Mitt fly', 'Kart', 'AI'].forEach((name, index) => {
+    ['Hjem', 'Kart', 'Fly', 'AI-guide'].forEach((name, index) => {
       expect(tabNames[index]).toMatch(new RegExp(`^${name},`));
     });
   });
