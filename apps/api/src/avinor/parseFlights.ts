@@ -15,6 +15,7 @@ interface AvinorFlight {
   schedule_time?: string;
   airport?: string;
   gate?: string | number;
+  check_in?: string;
   status?: { code?: string; time?: string };
 }
 
@@ -53,6 +54,7 @@ export function parseFlights(xml: string): Flight[] {
       scheduledDeparture: toIso(raw.schedule_time),
       updatedDeparture: status === 'new_time' ? toIso(raw.status?.time) : null,
       gate: raw.gate === undefined ? null : String(raw.gate),
+      checkIn: raw.check_in ?? null,
       boardingTime: null, // Avinors åpne feed har ikke boardingtid.
       status,
       lastUpdated,

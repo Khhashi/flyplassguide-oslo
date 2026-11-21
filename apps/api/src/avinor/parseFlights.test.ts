@@ -27,6 +27,7 @@ describe('parseFlights', () => {
       airline: 'SK',
       destination: 'CDG',
       gate: 'E9',
+      checkIn: '4-7',
       status: 'new_time',
       scheduledDeparture: '2026-11-20T14:55:00.000Z',
       updatedDeparture: '2026-11-20T15:35:00.000Z',

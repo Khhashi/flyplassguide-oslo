@@ -10,6 +10,7 @@ const flight = (flightNumber: string): Flight => ({
   scheduledDeparture: '2026-11-20T15:00:00.000Z',
   updatedDeparture: null,
   gate: 'A10',
+  checkIn: null,
   boardingTime: null,
   status: 'scheduled',
   lastUpdated: '2026-11-20T14:00:00.000Z',
