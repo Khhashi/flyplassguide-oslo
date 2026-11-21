@@ -1,4 +1,4 @@
-# Flyplassguide Oslo – Prosjektplan
+# FlyGuide – Prosjektplan
 
 ## Fokus
 Appen skal være den enkleste måten for eldre å komme seg fra døren til gaten på Gardermoen. Alt vi lager skal gjøre dette enklere.
@@ -96,11 +96,15 @@ Flydata caches i minnet i v1. Postgres trengs først for push-abonnementer og ka
 
 ## 4. Design
 
-- Hvit bakgrunn, mørk lettlest tekst. Primærfarge `#155EEF`.
-- Hvite inputfelt med diskrete grå kanter – aldri svarte inputfelt.
-- Store knapper, avrundede kort, god luft. Inspirert av Apple Maps.
-- Hjem: logo, velkomst («Velkommen til Gardermoen» / «Finn frem. Reis enklere.»), flynummersøk + blå «Finn»-knapp, kort for terminalkart og AI-assistent.
-- Navigasjon: Hjem, Mitt fly, Kart, AI.
+- Navn: FlyGuide.
+- Hvit bakgrunn, mørk lettlest tekst. Primærfarge lilla-blå `#4F46E5`.
+- Hvite inputfelt med diskrete grå kanter, blå ramme når de er aktive. Aldri svarte inputfelt.
+- Knapper og felt minst 56 px høye. Avrundede kort og god luft.
+- Hjem: toppbilde med «God tur!» og flysøk, kortet «Ditt neste fly» med nedtelling til avgang, snarveier i rutenett (Kart, Finn gaten min, Mat og drikke, Butikker, Toaletter, AI-guide) og hjelp med assistanse.
+- Kart: kategoriknapper med ikoner, tegnet kart med rute (merket som illustrasjon) og kort «Til gate».
+- AI-guide: topp med Beta-merke, chatbobler og forslag til spørsmål.
+- Navigasjon: Hjem, Kart, Fly, AI-guide.
+- Alt som ikke er ekte data, merkes som demodata eller illustrasjon.
 
 ---
 

@@ -1,16 +1,20 @@
-# Flyplassguide Oslo ✈️
+# FlyGuide ✈️
 
 Finn frem. Reis enklere.
 
-> 🚧 Status: Under utvikling, ikke klar til bruk ennå. Fase 1 (grunnmuren) er ferdig.
+> 🚧 Status: Under utvikling, ikke klar til bruk ennå. Fase 1 av det nye designet er ferdig.
 
-Flyplassguide Oslo er en mobilapp som gjør det enkelt for eldre å finne frem på Oslo lufthavn Gardermoen.
+FlyGuide er en mobilapp som gjør det enkelt for eldre å finne frem på Oslo lufthavn Gardermoen.
 
 <p align="center">
-  <img src="docs/media/demo.gif" alt="Demo av appen: søk på flynummer, eksempel på flykort, kart med filter og AI-assistent" width="320">
+  <img src="docs/media/flyguide-mobil.gif" alt="Video av appen på mobil: søk på fly, steg til gaten, kart med toaletter og AI-guide" width="300">
 </p>
 
-<p align="center"><em>Slik ser appen ut nå. Flydata og steder i videoen er eksempeldata.</em></p>
+<p align="center"><em>Slik ser appen ut nå. Flydata, steder og kartet i videoen er eksempeldata.</em></p>
+
+<p align="center">
+  <img src="docs/media/skjermer.png" alt="Tre skjermer: Hjem, Kart og AI-guide" width="900">
+</p>
 
 ---
 
