@@ -1,6 +1,10 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
 
+import * as Speech from 'expo-speech';
+
 import { StepByStep } from '../StepByStep';
+
+jest.mock('expo-speech', () => ({ speak: jest.fn(), stop: jest.fn() }));
 
 const steps = ['Lever bagasjen.', 'Gå gjennom sikkerhetskontrollen.', 'Gå til gate A12.'];
 
@@ -17,5 +21,15 @@ describe('StepByStep', () => {
 
     await fireEvent.press(screen.getByRole('button', { name: 'Tilbake' }));
     expect(screen.getByText('Steg 2 av 3')).toBeOnTheScreen();
+  });
+
+  it('leser opp steget som vises', async () => {
+    await render(<StepByStep steps={steps} />);
+    await fireEvent.press(screen.getByRole('button', { name: 'Neste steg' }));
+    await fireEvent.press(screen.getByRole('button', { name: 'Les opp' }));
+
+    expect(Speech.speak).toHaveBeenCalledWith('Gå gjennom sikkerhetskontrollen.', {
+      language: 'nb-NO',
+    });
   });
 });

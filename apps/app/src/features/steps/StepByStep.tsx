@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Text, View } from 'react-native';
 
 import { Button } from '@/components/Button';
+import { ReadAloudButton } from '@/features/speech/ReadAloudButton';
 
 /** Viser ett steg om gangen med stor tekst, slik at det er lett å følge med. */
 export function StepByStep({ steps }: { steps: string[] }) {
@@ -17,6 +18,7 @@ export function StepByStep({ steps }: { steps: string[] }) {
         {steps[index]}
       </Text>
       <View className="gap-3">
+        <ReadAloudButton text={steps[index] ?? ''} />
         {!isLast ? <Button label="Neste steg" onPress={() => setIndex(index + 1)} /> : null}
         {index > 0 ? (
           <Button label="Tilbake" variant="secondary" onPress={() => setIndex(index - 1)} />
