@@ -9,6 +9,7 @@ describe('Navigasjon', () => {
 
     expect(screen.getByText('Velkommen til Gardermoen')).toBeOnTheScreen();
     expect(screen.getByLabelText('Flynummer')).toBeOnTheScreen();
+    expect(screen.getByRole('button', { name: 'Trenger du hjelp?' })).toBeOnTheScreen();
   });
 
   it('søk etter flynummer åpner Mitt fly uten å vise oppdiktede data', async () => {
