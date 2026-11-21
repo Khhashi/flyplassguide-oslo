@@ -1,5 +1,14 @@
 # Flyplassguide Oslo – Prosjektplan
 
+## Fokus
+Appen skal være den enkleste måten for eldre å komme seg fra døren til gaten på Gardermoen. Alt vi lager skal gjøre dette enklere.
+
+Regler for design:
+- Stor tekst (minst 20 px), høy kontrast og store knapper (minst 56 px)
+- Én ting på skjermen om gangen
+- Enkle ord, ingen faguttrykk
+- Kan leses opp
+
 Navigasjonsapp for Oslo lufthavn Gardermoen. iOS og Android er hovedproduktet. Web er en lettversjon fra samme kodebase.
 
 Plattformprioritet

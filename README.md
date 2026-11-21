@@ -4,7 +4,7 @@ Finn frem. Reis enklere.
 
 > 🚧 Status: Under utvikling, ikke klar til bruk ennå. Fase 1 (grunnmuren) er ferdig.
 
-Flyplassguide Oslo er en mobilapp for iPhone og Android som hjelper deg å finne frem på Oslo lufthavn Gardermoen.
+Flyplassguide Oslo er en mobilapp som gjør det enkelt for eldre å finne frem på Oslo lufthavn Gardermoen.
 
 <p align="center">
   <img src="docs/media/demo.gif" alt="Demo av appen: søk på flynummer, eksempel på flykort, kart med filter og AI-assistent" width="320">
@@ -20,18 +20,20 @@ Gardermoen er en stor flyplass. Mange synes det er stressende å finne riktig ga
 
 Informasjonen finnes, men den er spredt: på skjermer i terminalen, på nettsider og på skilt. Jeg vil samle det du trenger på ett sted, i en app som er enkel å bruke for alle, også for de som ikke er vant med teknologi.
 
-Målet er at du skal bruke mindre tid på å lete og mer tid på å slappe av før du flyr.
+Avinor har allerede en god app, men den har mye på én gang. Mange eldre synes det er vanskelig å finne frem i den, og på flyplassen.
+
+Derfor lager jeg en app som gjør én ting: viser deg steg for steg hva du skal gjøre, fra du kommer inn døren til du står ved gaten.
 
 ---
 
 ## Hva skal appen kunne gjøre?
 
-- Finne flyet ditt: Skriv inn flynummeret, så ser du avgangstid, status og gate.
-- Gi beskjed om endringer: Du får et varsel hvis gaten eller tiden endres.
-- Vise kart over terminalen: Se hvor gater, butikker, restauranter og toaletter er.
-- Vise vei: Få veibeskrivelse til gaten din, også ruter uten trapper.
-- Svare på spørsmål: Spør en assistent, for eksempel «Hvor er nærmeste toalett?» eller «Er flyet mitt forsinket?»
-- Senere: Vise piler gjennom mobilkameraet som viser veien.
+- Steg for steg: Skriv inn flynummeret, så får du en enkel liste. For eksempel: «1. Lever bagasjen ved skranke 1–3. 2. Gå gjennom sikkerhetskontrollen. 3. Gå til gate A15.»
+- Stor tekst og få knapper: Én ting på skjermen om gangen.
+- Lese opp: Appen kan lese stegene høyt.
+- Gi beskjed om endringer: Du får et tydelig varsel hvis gaten eller tiden endres.
+- Hjelp på flyplassen: Lett å bestille assistanse og finne toalett eller sitteplass.
+- Familie kan følge med: Barn eller barnebarn kan se hvor langt du har kommet.
 
 ---
 
