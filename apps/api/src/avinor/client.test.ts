@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 
-import { AvinorError, fetchDepartures } from './client';
+import { AvinorError, fetchDepartures, fetchNames } from './client';
 
 function latin1(text: string): ArrayBuffer {
   return Uint8Array.from(text, (char) => char.charCodeAt(0)).buffer;
@@ -51,5 +51,15 @@ describe('fetchDepartures', () => {
     const error = await fetchDepartures({ fetchImpl }).catch((e: unknown) => e);
     expect(error).toBeInstanceOf(AvinorError);
     expect(error).toMatchObject({ kind: 'network' });
+  });
+});
+
+describe('fetchNames', () => {
+  it('henter listen over flyselskap', async () => {
+    const fetchImpl = vi.fn(async () => new Response(latin1('<airlineNames/>')));
+
+    await expect(fetchNames('airlineNames', { fetchImpl })).resolves.toBe('<airlineNames/>');
+    const [url] = fetchImpl.mock.calls[0] as unknown as [string];
+    expect(url).toBe('https://asrv.avinor.no/airlineNames/v1.0');
   });
 });

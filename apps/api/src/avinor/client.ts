@@ -41,6 +41,22 @@ export async function fetchDepartures({
   });
   const url = `${baseUrl}/XmlFeed/v1.0?${params.toString()}`;
 
+  return fetchLatin1(url, fetchImpl, timeoutMs);
+}
+
+/** Henter navnelistene for flyselskap eller flyplasser. Avinor ber om at de hentes sjelden. */
+export function fetchNames(
+  kind: 'airlineNames' | 'airportNames',
+  { fetchImpl = fetch, baseUrl = AVINOR_BASE_URL, timeoutMs = 10_000 } = {},
+): Promise<string> {
+  return fetchLatin1(`${baseUrl}/${kind}/v1.0`, fetchImpl, timeoutMs);
+}
+
+async function fetchLatin1(
+  url: string,
+  fetchImpl: typeof fetch,
+  timeoutMs: number,
+): Promise<string> {
   let response: Response;
   try {
     response = await fetchImpl(url, { signal: AbortSignal.timeout(timeoutMs) });
