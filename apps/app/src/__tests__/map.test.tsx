@@ -44,3 +44,12 @@ describe('Terminalkart – fra snarvei', () => {
     expect(screen.queryByText('Kafé')).not.toBeOnTheScreen();
   });
 });
+
+describe('Terminalkart – rute', () => {
+  it('viser rute til gaten uten oppdiktet gangtid', async () => {
+    await renderRouter(appDir, { initialUrl: '/map' });
+
+    expect(screen.getByRole('header', { name: 'Til gate A12' })).toBeOnTheScreen();
+    expect(screen.getByText(/kommer når vi har et verifisert kart/)).toBeOnTheScreen();
+  });
+});
