@@ -8,3 +8,4 @@ export declare const colors: {
   success: { DEFAULT: string; soft: string };
 };
 export declare const radius: { card: string; control: string };
+export declare const touchTarget: number;
