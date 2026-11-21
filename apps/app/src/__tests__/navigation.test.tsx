@@ -4,11 +4,11 @@ import path from 'node:path';
 const appDir = path.resolve(__dirname, '../app');
 
 describe('Navigasjon', () => {
-  it('viser hjemskjermen med velkomst og flysøk', async () => {
+  it('viser hjemskjermen med hilsen og flysøk', async () => {
     await renderRouter(appDir, { initialUrl: '/' });
 
     expect(screen.getByText('FlyGuide')).toBeOnTheScreen();
-    expect(screen.getByText('Velkommen til Gardermoen')).toBeOnTheScreen();
+    expect(screen.getByText('God tur!')).toBeOnTheScreen();
     expect(screen.getByLabelText('Flynummer')).toBeOnTheScreen();
     expect(screen.getByRole('button', { name: 'Trenger du hjelp?' })).toBeOnTheScreen();
   });

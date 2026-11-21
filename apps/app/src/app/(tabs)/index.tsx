@@ -1,29 +1,17 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router } from 'expo-router';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import { Card } from '@/components/Card';
 import { Screen } from '@/components/Screen';
 import { AssistanceCard } from '@/features/assistance/AssistanceCard';
-import { FlightSearch } from '@/features/flight/FlightSearch';
+import { HomeHero } from '@/features/home/HomeHero';
 import { colors } from '@/theme/tokens';
 
 export default function HomeScreen() {
   return (
     <Screen>
-      <View className="flex-row items-center gap-2">
-        <Ionicons name="airplane" size={22} color={colors.primary.DEFAULT} />
-        <Text className="text-lg font-bold text-ink">FlyGuide</Text>
-      </View>
-
-      <View className="gap-2 rounded-card bg-primary-soft p-6 md:p-10">
-        <Text accessibilityRole="header" className="text-3xl font-bold text-ink md:text-4xl">
-          Velkommen til Gardermoen
-        </Text>
-        <Text className="text-lg text-ink-muted">Finn frem. Reis enklere.</Text>
-      </View>
-
-      <FlightSearch
+      <HomeHero
         onSearch={(flightNumber) =>
           router.push({ pathname: '/my-flight', params: { flight: flightNumber } })
         }
