@@ -3,7 +3,13 @@ import path from 'node:path';
 
 const appDir = path.resolve(__dirname, '../app');
 
-describe('AI-assistent', () => {
+describe('AI-guide', () => {
+  it('viser overskriften AI-guide med Beta', async () => {
+    await renderRouter(appDir, { initialUrl: '/assistant' });
+    expect(screen.getByRole('header', { name: 'AI-guide' })).toBeOnTheScreen();
+    expect(screen.getByText('Beta')).toBeOnTheScreen();
+  });
+
   it('viser spørsmålet og svarer ærlig at den ikke er koblet til', async () => {
     await renderRouter(appDir, { initialUrl: '/assistant' });
 
