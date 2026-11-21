@@ -13,7 +13,7 @@ FlyGuide er en mobilapp som gjør det enkelt for eldre å finne frem på Oslo lu
 <p align="center"><em>Slik ser appen ut nå. Flydata, steder og kartet i videoen er eksempeldata.</em></p>
 
 <p align="center">
-  <img src="docs/media/skjermer.png" alt="Tre skjermer: Hjem, Kart og AI-guide" width="900">
+  <img src="docs/media/skjermer.png" alt="Fire skjermer: Hjem, Kart, Fly og AI-guide" width="1000">
 </p>
 
 ---
