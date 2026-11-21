@@ -7,7 +7,7 @@ Finn frem. Reis enklere.
 FlyGuide er en mobilapp som gjør det enkelt for eldre å finne frem på Oslo lufthavn Gardermoen.
 
 <p align="center">
-  <img src="docs/media/flyguide-mobil.gif" alt="Video av appen på mobil: søk på fly, steg til gaten, kart med toaletter og AI-guide" width="300">
+  <img src="docs/media/flyguide-mobil.gif" alt="Video av appen på mobil: skriv inn flynummeret, følg stegene til gaten og se veien på kartet" width="300">
 </p>
 
 <p align="center"><em>Slik ser appen ut nå. Flydata, steder og kartet i videoen er eksempeldata.</em></p>
