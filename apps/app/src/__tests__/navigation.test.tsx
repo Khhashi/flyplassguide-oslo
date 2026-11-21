@@ -1,6 +1,8 @@
 import { fireEvent, renderRouter, screen } from 'expo-router/testing-library';
 import path from 'node:path';
 
+import * as api from '@/features/flight/api';
+
 const appDir = path.resolve(__dirname, '../app');
 
 describe('Navigasjon', () => {
@@ -16,6 +18,7 @@ describe('Navigasjon', () => {
   });
 
   it('søk etter flynummer åpner Mitt fly uten å vise oppdiktede data', async () => {
+    jest.spyOn(api, 'fetchFlight').mockResolvedValue({ kind: 'not_found' });
     await renderRouter(appDir, { initialUrl: '/' });
 
     await fireEvent.changeText(screen.getByLabelText('Flynummer'), 'dy 123');
@@ -23,8 +26,9 @@ describe('Navigasjon', () => {
 
     expect(screen).toHavePathname('/my-flight');
     expect(screen).toHaveSearchParams({ flight: 'DY123' });
-    expect(screen.getByText('DY123')).toBeOnTheScreen();
-    expect(screen.getByText(/ikke ekte flyinformasjon/)).toBeOnTheScreen();
+    expect(
+      await screen.findByText(/Henter flyet ditt|Fant ikke|Får ikke hentet/),
+    ).toBeOnTheScreen();
   });
 
   it('har fire faner: Hjem, Kart, Fly og AI-guide', async () => {

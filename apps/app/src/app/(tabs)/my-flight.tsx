@@ -8,6 +8,7 @@ import { DemoBadge } from '@/components/DemoBadge';
 import { Screen } from '@/components/Screen';
 import { DEMO_FLIGHT } from '@/data/demo-flight';
 import { FlightCard } from '@/features/flight/FlightCard';
+import { FlightStatus } from '@/features/flight/FlightStatus';
 import { StepByStep } from '@/features/steps/StepByStep';
 import { buildSteps } from '@/features/steps/buildSteps';
 
@@ -22,10 +23,7 @@ export default function MyFlightScreen() {
       </Text>
 
       {flight ? (
-        <Card
-          title={flight}
-          description="Vi henter ikke ekte flyinformasjon fra Avinor ennå. Derfor viser vi ingen avgangstid eller gate for dette flyet."
-        />
+        <FlightStatus flightNumber={flight} />
       ) : (
         <Card title="Ingen fly valgt" description="Søk etter flynummeret ditt på Hjem-siden." />
       )}

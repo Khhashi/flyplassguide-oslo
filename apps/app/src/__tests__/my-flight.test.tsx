@@ -1,14 +1,16 @@
 import { fireEvent, renderRouter, screen } from 'expo-router/testing-library';
 import path from 'node:path';
 
+import * as api from '@/features/flight/api';
+
 const appDir = path.resolve(__dirname, '../app');
 
 describe('Mitt fly', () => {
-  it('viser ingen oppdiktet tid eller gate for et søkt fly', async () => {
+  it('viser ingen oppdiktet tid eller gate når flyet ikke finnes', async () => {
+    jest.spyOn(api, 'fetchFlight').mockResolvedValue({ kind: 'not_found' });
     await renderRouter(appDir, { initialUrl: '/my-flight?flight=DY123' });
 
-    expect(screen.getByText('DY123')).toBeOnTheScreen();
-    expect(screen.getByText(/ikke ekte flyinformasjon/)).toBeOnTheScreen();
+    expect(await screen.findByText('Fant ikke DY123')).toBeOnTheScreen();
     expect(screen.queryByText('Gate')).not.toBeOnTheScreen();
   });
 
